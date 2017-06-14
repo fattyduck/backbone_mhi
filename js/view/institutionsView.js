@@ -6,6 +6,7 @@ define([
   'view/institutionView'], function($, _, Backbone, Institutions, InstitutionView){
 
     var InstitutionsView = Backbone.View.extend({
+
       render: function(){
         var self = this;
 

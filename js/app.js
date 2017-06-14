@@ -5,23 +5,29 @@ define([
   'model/institution',
   'view/institutionView',
   'model/institutions',
-  'view/institutionsView'], function($, _, Backbone, Institution, InstitutionView, Institutions, InstitutionsView){
+  'view/institutionsView',
+  'view/institutionInfoView',
+  'router/AppRouter'], function($, _, Backbone, Institution, InstitutionView,
+    Institutions, InstitutionsView, InstitutionInfoView, AppRouter){
 
     var initialize = function(){
-      var institution = new Institution({name: "name"});
-
-      var institutionView = new InstitutionView({el: "#institution", model: institution});
-      institutionView.render();
-
+      var router = new AppRouter();
+      Backbone.history.start();
       var institutions = new Institutions([
-        new Institution({name: "1"}),
-        new Institution({name: "2"}),
-        new Institution({name: "3"})
+        new Institution({name: "King Piccolo King Piccolo King Piccolo", address: "Dog house on the Left"}),
+        new Institution({name: "Majin Vegeta King Piccolo King Piccolo", address: "Dog house on the Right"}),
+        new Institution({name: "Lord Beerus King Piccolo King Piccolo", address: "Dog house on the Left"})
       ])
 
       var institutionsView = new InstitutionsView({el: "#institutions", model: institutions})
       institutionsView.render();
     }
+
+    var institution = new Institution({name: "name", address: "Address"});
+
+    var institutionInfoView = new InstitutionInfoView({el: "#institution", model: institution});
+    institutionInfoView.render();
+
 
     return {
       initialize: initialize

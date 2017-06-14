@@ -9,12 +9,20 @@
         <link rel="stylesheet" href="css/normalize.min.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/styles.css">
-
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
         <script src="js/lib/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
-        <div id="institution"></div>
-        <div id="institutions"></div>
+        <div class="container-fluid text-center">
+          <div class="row content">
+            <div id="institutions" class="col-sm-4 sidenav">
+              <div  class="btn-group"></div>
+            </div>
+            <div class="col-sm-6">
+              <div id="institution"></div>
+            </div>
+          </div>
+        </div>
         <script src="js/lib/require.js" data-main="js/main"></script>
     </body>
 </html>
