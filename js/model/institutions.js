@@ -7,6 +7,6 @@ define([
     var Institutions = Backbone.Collection.extend({
       model : Institution
     })
-    
+
     return Institutions
 })
